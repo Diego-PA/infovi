@@ -26,7 +26,7 @@
     
     <div class="container">
         <p>La confusión de la población respecto a los síntomas del covid 19, provoca que llamen ambulancias o acudan a hospitales muchas veces incluso cuando no tienen la enfermedad entorpeciendo el sistema de salud y su pronta respuesta. Por ello este sistema permite el autodiagnóstico sobre la enfermedad de manera intuitiva para la población en general y permite conocer la posibilidad de infección por covid 19, evitando la sobresaturación de hospitales y ambulancias.</p>
-        <img src="" class="rounded mx-auto d-block" alt="...">
+        <img src="/public/logo.png" class="rounded mx-auto d-block" alt="...">
     </div>
 
 </body>
