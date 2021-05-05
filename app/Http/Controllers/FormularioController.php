@@ -23,8 +23,6 @@ class FormularioController extends Controller{
             'diarrea' => 'present',
         ]);*/
 
-        echo "valida";
-
         //si el correo llega
         if ($request->input('correo') != null) {
     
@@ -107,6 +105,15 @@ class FormularioController extends Controller{
             'id_diagnostico' => $id_diagnostico,
             'id_correo' => $id_correo,
         ]);
+
+        if ($id_diagnostico == 1) {
+            return view('alta');
+        } else if($id_diagnostico == 2){
+            return view('media');
+        }else {
+            return view('baja');
+        }
+        
 
     }
 
