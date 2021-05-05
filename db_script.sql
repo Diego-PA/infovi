@@ -23,3 +23,7 @@ CREATE TABLE correos (
     id SERIAL PRIMARY KEY,
     correo VARCHAR(250)
 );
+
+INSERT INTO diagnosticos (diagnostico) VALUES ('Alta');
+INSERT INTO diagnosticos (diagnostico) VALUES ('Media');
+INSERT INTO diagnosticos (diagnostico) VALUES ('Baja');

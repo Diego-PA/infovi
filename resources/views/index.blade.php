@@ -40,76 +40,125 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-ch-6">
                 <div class="well-block">
-                    <form action="" method="post">
+                    <form method="POST" action="{{ route('guardar') }}">
                         @csrf
                         <!-- Form start -->
                         <div class="row">
+
                             <!--correo electrónico-->
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label" for="correo">Correo Electrónico (Ópcional)</label>
-                                    <input id="correo" name="correo" type="text" placeholder="correo@ejemplo.com" class="form-control input-md">
+                                    <input id="correo" for="correo" name="correo" type="text" placeholder="correo@ejemplo.com" class="form-control input-md">
                                 </div>
                             </div>
 
                             <!--genero-->
                             <div class="col-md-6">
                                 <label class="control-label" for="genero">Género</label>
-                                <select class="custom-select" aria-label="Default select example">
+                                <select class="custom-select" aria-label="Default select example" for="genero" name="genero">
                                     <option selected>Selecciona una opción</option>
-                                    <option value="1">Femenino</option>
-                                    <option value="2">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="M">Masculino</option>
                                 </select>
                             </div>
 
                             <!--contacto con algún paciente confirmado-->
                             <div class="col-md-6">
                                 <label class="control-label" for="contacto">¿Has tenido contacto con algún paciente confirmado con Covid 19 en los últimos días?</label>
-                                <select class="custom-select" aria-label="Default select example">
+                                <select class="custom-select" aria-label="Default select example" for="contacto" name="contacto">
                                     <option selected>Selecciona una opción</option>
                                     <option value="1">Si</option>
                                     <option value="2">No</option>
-                                    <option value="2">No lo sé</option>
+                                    <option value="3">No lo sé</option>
                                 </select>
                             </div>
 
-
-                            <!--Aquí me quedé###########################################->
-
-
-                            <!-- Text input-->
+                            <!--fiebre-->
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label" for="email">¿Persives olores?</label>
-                                    <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
-                                </div>
+                                <label class="control-label" for="fiebre">¿Tienes fiebre mayor a 38°C?</label>
+                                <select class="custom-select" aria-label="Default select example" for="fiebre" name="fiebre">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
                             </div>
-                            <!-- Text input-->
+
+                            <!--tos seca-->
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label" for="date">¿Perdiste el sentido del gusto al ingerir alimento?</label>
-                                    <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
-                                </div>
+                                <label class="control-label" for="tos">¿Tienes tos seca?</label>
+                                <select class="custom-select" aria-label="Default select example" for="tos" name="tos">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
                             </div>
-                            <!-- Select Basic -->
+
+                            <!--dificultad respirar-->
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label" for="time">¿Te sientes más cansado de lo normal?</label>
-                                    <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
-                                </div>
+                                <label class="control-label" for="respirar">¿Has experimentado falta de aire o dificultad para respirar?</label>
+                                <select class="custom-select" aria-label="Default select example" for="respirar" name="respirar">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
                             </div>
-                            <!-- Select Basic -->
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="control-label" for="appointmentfor">¿Cuanto es tu nivel de oxigeno?</label>
-                                    <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
-                                </div>
+
+                            <!--dolor de pecho-->
+                            <div class="col-md-6">
+                                <label class="control-label" for="pecho">¿Sientes dolor en el pecho o pulsaciones?</label>
+                                <select class="custom-select" aria-label="Default select example" for="pecho" name="pecho">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
                             </div>
+
+                            <!--dolor de cabeza-->
+                            <div class="col-md-6">
+                                <label class="control-label" for="cabeza">¿Sientes dolor de cabeza recurrentemente?</label>
+                                <select class="custom-select" aria-label="Default select example" for="cabeza" name="cabeza">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+
+                            <!--escrurrimiento-->
+                            <div class="col-md-6">
+                                <label class="control-label" for="escurrimiento">¿Presentas escurrimiento nasal?</label>
+                                <select class="custom-select" aria-label="Default select example" for="escurrimiento" name="escurrimiento">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+
+                            <!--dolores musculares-->
+                            <div class="col-md-6">
+                                <label class="control-label" for="musculos">¿Presentas dolorers musculares o sensación de cuerpo cortado?</label>
+                                <select class="custom-select" aria-label="Default select example" for="musculos" name="musculos">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+
+                            <!--diarrea-->
+                            <div class="col-md-6">
+                                <label class="control-label" for="diarrea">¿Sufres de diarrea o malestar estomacal?</label>
+                                <select class="custom-select" aria-label="Default select example" for="diarrea" name="diarrea">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="true">Si</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+
                             <!-- Button -->
                             <div class="col-md-12">
-                                <div class="form-group">
-                                    <button id="singlebutton" name="singlebutton" class="new-btn-d br-2">Enviar Cuestionario</button>
-                                </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                            <br>
                             </div>
                         </div>
                     </form>
