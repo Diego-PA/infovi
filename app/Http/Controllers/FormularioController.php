@@ -10,24 +10,12 @@ use App\Respuesta;
 class FormularioController extends Controller{
 
     public function guardar(Request $request){
-/*
-        $validacion = $request->validate([
-            'genero' => 'present',
-            'fiebre' => 'present',
-            'tos' => 'present',
-            'respirar' => 'present',
-            'pecho' => 'present',
-            'cabeza' => 'present',
-            'escurrimiento' => 'present',
-            'musculos' => 'present',
-            'diarrea' => 'present',
-        ]);*/
-
-        //si el correo llega
+        
         if ($request->input('correo') != null) {
     
             $id_correo = DB::table('correos')->insertGetId([
                 'correo' => $request->input('correo'),
+                'estado' => 1,
             ]);
 
         } else {

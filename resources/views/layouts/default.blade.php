@@ -53,6 +53,7 @@
             <a class="nav-item nav-link" href="{{ route('info') }}">Información</a>
             <a class="nav-item nav-link" href="{{ route('stats') }}">Estadísticas</a>
             <a class="nav-item nav-link" href="{{ route('about') }}">Acerca de Nosotros</a> 
+            <a class="nav-item nav-link" href="{{ route('unsubscribe') }}">Anular la suscripción</a> 
         </div>
     </div>
     </nav>

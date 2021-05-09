@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        factory(\App\Correo::class, 20)->create();
+
+        factory(\App\Respuesta::class, 10)->states('alta')->create();
+        factory(\App\Respuesta::class, 10)->states('media')->create();
+        factory(\App\Respuesta::class, 10)->states('baja')->create();
+
     }
 }

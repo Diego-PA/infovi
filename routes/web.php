@@ -17,5 +17,7 @@ Route::get('/', function () { return view('index');}) -> name('index');
 Route::get('/info', function () { return view('info');}) -> name('info');
 Route::get('/stats', function () { return view('stats');}) -> name('stats');
 Route::get('/about', function () { return view('about');}) -> name('about');
+Route::get('/unsubscribe', function () { return view('unsubscribe');}) -> name('unsubscribe');
 
 Route::post('/send', 'FormularioController@guardar') -> name('guardar');
+Route::post('/deshabilitar', 'SubController@deshabilitar') -> name('deshabilitar');

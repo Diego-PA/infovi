@@ -21,7 +21,8 @@ CREATE TABLE diagnosticos (
 
 CREATE TABLE correos (
     id SERIAL PRIMARY KEY,
-    correo VARCHAR(250)
+    correo VARCHAR(250),
+	estado BOOLEAN NOT NULL
 );
 
 INSERT INTO diagnosticos (diagnostico) VALUES ('Alta');
